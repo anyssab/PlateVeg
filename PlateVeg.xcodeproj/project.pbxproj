@@ -7,6 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7727CAA118E203D300F0A72B /* meat.png in Resources */ = {isa = PBXBuildFile; fileRef = 7727CAA018E203D300F0A72B /* meat.png */; };
+		7727CAAF18E2059C00F0A72B /* bread.png in Resources */ = {isa = PBXBuildFile; fileRef = 7727CAAE18E2059C00F0A72B /* bread.png */; };
+		7727CAB118E205A300F0A72B /* fat.png in Resources */ = {isa = PBXBuildFile; fileRef = 7727CAB018E205A300F0A72B /* fat.png */; };
+		7727CAB318E205A600F0A72B /* oil.png in Resources */ = {isa = PBXBuildFile; fileRef = 7727CAB218E205A600F0A72B /* oil.png */; };
+		7727CAB518E205AB00F0A72B /* veg.png in Resources */ = {isa = PBXBuildFile; fileRef = 7727CAB418E205AB00F0A72B /* veg.png */; };
+		7727CAB718E205AE00F0A72B /* fruit.png in Resources */ = {isa = PBXBuildFile; fileRef = 7727CAB618E205AE00F0A72B /* fruit.png */; };
+		7727CAB918E205B500F0A72B /* dairy.png in Resources */ = {isa = PBXBuildFile; fileRef = 7727CAB818E205B500F0A72B /* dairy.png */; };
+		7727CABB18E205BE00F0A72B /* nuts.png in Resources */ = {isa = PBXBuildFile; fileRef = 7727CABA18E205BE00F0A72B /* nuts.png */; };
 		7756F99E18D8A81B0071F715 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7756F99D18D8A81B0071F715 /* Foundation.framework */; };
 		7756F9A018D8A81B0071F715 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7756F99F18D8A81B0071F715 /* CoreGraphics.framework */; };
 		7756F9A218D8A81B0071F715 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7756F9A118D8A81B0071F715 /* UIKit.framework */; };
@@ -21,6 +29,7 @@
 		7756F9BF18D8A81B0071F715 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7756F9A118D8A81B0071F715 /* UIKit.framework */; };
 		7756F9C718D8A81B0071F715 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 7756F9C518D8A81B0071F715 /* InfoPlist.strings */; };
 		7756F9C918D8A81B0071F715 /* PlateVegTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 7756F9C818D8A81B0071F715 /* PlateVegTests.m */; };
+		7756F9D518D8B3C70071F715 /* plate.png in Resources */ = {isa = PBXBuildFile; fileRef = 7756F9D418D8B3C70071F715 /* plate.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,6 +43,14 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		7727CAA018E203D300F0A72B /* meat.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = meat.png; sourceTree = "<group>"; };
+		7727CAAE18E2059C00F0A72B /* bread.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bread.png; sourceTree = "<group>"; };
+		7727CAB018E205A300F0A72B /* fat.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = fat.png; sourceTree = "<group>"; };
+		7727CAB218E205A600F0A72B /* oil.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = oil.png; sourceTree = "<group>"; };
+		7727CAB418E205AB00F0A72B /* veg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = veg.png; sourceTree = "<group>"; };
+		7727CAB618E205AE00F0A72B /* fruit.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = fruit.png; sourceTree = "<group>"; };
+		7727CAB818E205B500F0A72B /* dairy.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = dairy.png; sourceTree = "<group>"; };
+		7727CABA18E205BE00F0A72B /* nuts.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = nuts.png; sourceTree = "<group>"; };
 		7756F99A18D8A81B0071F715 /* PlateVeg.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PlateVeg.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7756F99D18D8A81B0071F715 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		7756F99F18D8A81B0071F715 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -53,6 +70,7 @@
 		7756F9C418D8A81B0071F715 /* PlateVegTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "PlateVegTests-Info.plist"; sourceTree = "<group>"; };
 		7756F9C618D8A81B0071F715 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		7756F9C818D8A81B0071F715 /* PlateVegTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PlateVegTests.m; sourceTree = "<group>"; };
+		7756F9D418D8B3C70071F715 /* plate.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = plate.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -113,6 +131,15 @@
 			isa = PBXGroup;
 			children = (
 				7756F9AC18D8A81B0071F715 /* AppDelegate.h */,
+				7756F9D418D8B3C70071F715 /* plate.png */,
+				7727CAB418E205AB00F0A72B /* veg.png */,
+				7727CAB018E205A300F0A72B /* fat.png */,
+				7727CABA18E205BE00F0A72B /* nuts.png */,
+				7727CAB618E205AE00F0A72B /* fruit.png */,
+				7727CAB818E205B500F0A72B /* dairy.png */,
+				7727CAA018E203D300F0A72B /* meat.png */,
+				7727CAB218E205A600F0A72B /* oil.png */,
+				7727CAAE18E2059C00F0A72B /* bread.png */,
 				7756F9AD18D8A81B0071F715 /* AppDelegate.m */,
 				7756F9AF18D8A81B0071F715 /* Main.storyboard */,
 				7756F9B218D8A81B0071F715 /* ViewController.h */,
@@ -228,9 +255,18 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7727CAB118E205A300F0A72B /* fat.png in Resources */,
 				7756F9B618D8A81B0071F715 /* Images.xcassets in Resources */,
 				7756F9A818D8A81B0071F715 /* InfoPlist.strings in Resources */,
+				7727CAAF18E2059C00F0A72B /* bread.png in Resources */,
+				7756F9D518D8B3C70071F715 /* plate.png in Resources */,
+				7727CABB18E205BE00F0A72B /* nuts.png in Resources */,
 				7756F9B118D8A81B0071F715 /* Main.storyboard in Resources */,
+				7727CAB518E205AB00F0A72B /* veg.png in Resources */,
+				7727CAB318E205A600F0A72B /* oil.png in Resources */,
+				7727CAB918E205B500F0A72B /* dairy.png in Resources */,
+				7727CAB718E205AE00F0A72B /* fruit.png in Resources */,
+				7727CAA118E203D300F0A72B /* meat.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -456,6 +492,7 @@
 				7756F9CE18D8A81B0071F715 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		7756F9CF18D8A81B0071F715 /* Build configuration list for PBXNativeTarget "PlateVegTests" */ = {
 			isa = XCConfigurationList;
@@ -464,6 +501,7 @@
 				7756F9D118D8A81B0071F715 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
