@@ -46,7 +46,7 @@
     
     
     [super viewDidLoad];
-
+    
     Image0.image = [UIImage imageNamed:@"veg.png"];
     Image1.image = [UIImage imageNamed:@"fruit.png"];
     Image2.image = [UIImage imageNamed:@"bread.png"];
@@ -75,18 +75,18 @@
     //z position to make the duplicate image come from the front
     [Image8.layer setZPosition:-2];
     
-   self.plateImages= @[Image0, Image1, Image2, Image3, Image4, Image5, Image6, Image7];
+    self.plateImages= @[Image0, Image1, Image2, Image3, Image4, Image5, Image6, Image7];
     
     
     for (UIImageView *imgView in self.plateImages) {
         UIImageView *imgCopy = [[UIImageView alloc] initWithFrame:imgView.frame];
         [imgCopy setImage:imgView.image];
-    
+        
         [self.view addSubview:imgCopy];
         [self.view sendSubviewToBack:imgCopy];
         [imgCopy.layer setZPosition:-2];
         
-
+        
     }
     
 }
@@ -115,9 +115,9 @@
             self.currentView = imageView;
             [self.currentView.layer setZPosition:-1];
             break;
-        // Point lies inside the bounds.
+            // Point lies inside the bounds.
+        }
     }
-    }    
     
 }
 
@@ -138,7 +138,7 @@
         return YES;
     }
     if ([self isWithinFrame:locationBottomRight plateFrame:self.dropTarget.frame]) {
-            return YES;
+        return YES;
     }
     if ([self isWithinFrame:locationBottomLeft plateFrame:self.dropTarget.frame]) {
         return YES;
@@ -169,19 +169,19 @@
         [plateOverlay setHidden:NO];
     } else {
         [plateOverlay setHidden:YES];
-
-    }
-    
         
     }
+    
+    
+}
 
-    
-    
+
+
 
 
 - (void)touchesEnded:(NSSet *)touches withEvent:(UIEvent *)event{
     [plateOverlay setHidden:YES];
-
+    
     CGPoint location = [[touches anyObject] locationInView:self.view];
     
     if (location.x > self.dropTarget.frame.origin.x &&
@@ -189,10 +189,10 @@
         location.y > self.dropTarget.frame.origin.y &&
         location.y < self.dropTarget.frame.origin.y + self.dropTarget.frame.size.height )
         
-       
+        
     {
         
-    //self.dropTarget.backgroundColor = self.dragObject.backgroundColor;
+        //self.dropTarget.backgroundColor = self.dragObject.backgroundColor;
         
     }
     self.dragObject.frame = CGRectMake(self.homePosition.x, self.homePosition.y,
@@ -204,54 +204,57 @@
     [self.view addSubview:_currentView];
     [_currentView.layer setZPosition:-1];
     
-    if ([self.currentView isEqual:Image0]){
-        int counter = [count.text integerValue];
-        counter++;
-        count.text=[NSString stringWithFormat:@"%i", counter];
-        
-    }
-
-    else if([self.currentView isEqual:Image1]){
-        int counter= [count1.text integerValue];
-        counter++;
-        count1.text=[NSString stringWithFormat:@"%i", counter];
-    }
-    else if([self.currentView isEqual:Image2]){
-        int counter = [count2.text integerValue];
-        counter++;
-        count2.text = [NSString stringWithFormat:@"%i", counter];
-    }
-    else if([self.currentView isEqual:Image3]){
-        int counter = [count3.text integerValue];
-        counter++;
-        count3.text = [NSString stringWithFormat:@"%i", counter];
-    }
-    else if([self.currentView isEqual:Image4]){
-        int counter =[count4.text integerValue];
-        counter++;
-        count4.text = [NSString stringWithFormat:@"%i", counter];
-    }
-    else if([self.currentView isEqual:Image5]){
-        int counter = [count5.text integerValue];
-        counter++;
-        count5.text = [NSString stringWithFormat:@"%i", counter];
-    }
-    else if ([self.currentView isEqual:Image6]){
-        int counter = [count6.text integerValue];
-        counter++;
-        count6.text = [NSString stringWithFormat:@"%i", counter];
-    }else{
-        int counter = [count7.text integerValue];
-        counter++;
-        count7.text = [NSString stringWithFormat:@"%i", counter];
+    
+    if([self didFoodTouchPlate: self.currentView]){
+        if ([self.currentView isEqual:Image0]){
+            int counter = [count.text integerValue];
+            counter++;
+            count.text=[NSString stringWithFormat:@"%i", counter];
+        }else if([self.currentView isEqual:Image1]){
+            int counter= [count1.text integerValue];
+            counter++;
+            count1.text=[NSString stringWithFormat:@"%i", counter];
+        }
+        else if([self.currentView isEqual:Image2]){
+            int counter = [count2.text integerValue];
+            counter++;
+            count2.text = [NSString stringWithFormat:@"%i", counter];
+        }
+        else if([self.currentView isEqual:Image3]){
+            int counter = [count3.text integerValue];
+            counter++;
+            count3.text = [NSString stringWithFormat:@"%i", counter];
+        }
+        else if([self.currentView isEqual:Image4]){
+            int counter =[count4.text integerValue];
+            counter++;
+            count4.text = [NSString stringWithFormat:@"%i", counter];
+        }
+        else if([self.currentView isEqual:Image5]){
+            int counter = [count5.text integerValue];
+            counter++;
+            count5.text = [NSString stringWithFormat:@"%i", counter];
+        }
+        else if ([self.currentView isEqual:Image6]){
+            int counter = [count6.text integerValue];
+            counter++;
+            count6.text = [NSString stringWithFormat:@"%i", counter];
+        }else{
+            int counter = [count7.text integerValue];
+            counter++;
+            count7.text = [NSString stringWithFormat:@"%i", counter];
+        }
     }
     
+    
+    
     self.currentView = nil;
-
+    
     [super touchesEnded:touches withEvent:event];
     [self logTouchesFor:event];
-
 }
+
+
 
 -(void)logTouchesFor: (UIEvent*)event
 {
@@ -310,7 +313,7 @@
     else if(count7 > countD7){
         NSLog(@"you exceeded your meat intake");
     }
-    }
+}
 
 
 
