@@ -8,13 +8,14 @@
 
 #import <UIKit/UIKit.h>
 #import "ViewController.m"
+#import "ServerQueue.h"
 
 
 int counter;
 
 
 
-@interface ViewController : UIViewController {
+@interface ViewController : UIViewController <ServerQueueDelegate> {
 
     //count is count0 label
     IBOutlet UILabel*count;

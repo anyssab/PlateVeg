@@ -7,6 +7,8 @@
 //
 
 #import "ViewController.h"
+#import "PlistHandler.h"
+#import <CommonCrypto/CommonDigest.h>
 
 @interface ViewController ()
 
@@ -18,6 +20,8 @@
 @property (nonatomic, strong) NSArray *plateImages;
 
 @property (nonatomic) UIView *plateOverlay;
+@property (nonatomic) ServerQueue *serverQueue;
+
 
 @end
 
@@ -30,6 +34,7 @@
 @synthesize touchOffset;
 @synthesize homePosition;
 @synthesize plateOverlay;
+@synthesize serverQueue;
 
 - (void)viewDidLoad
 {
@@ -89,7 +94,48 @@
         
     }
     
+    
+    NSNumber *studyNumber = [NSNumber numberWithInteger:10098];
+    NSString *password = [self sha1:@"text"];
+    
+    PlistHandler *handler = [[PlistHandler alloc]init];
+    
+    [handler saveStudyNumber:studyNumber];
+    [handler savePassword:password];
+    
+    serverQueue = [[ServerQueue alloc] init];
+    
+    serverQueue.delegate = self;
+    
+
+    Inq *inq = [[Inq alloc] initGoal:@"GOAL" :[NSNumber numberWithInt:160] :[NSNumber numberWithFloat:67.5]:[NSNumber numberWithInt:30] :[NSNumber numberWithInt: 0] :[NSNumber numberWithInt: 120]];
+    [serverQueue addToQueue: inq];
+    
 }
+
+- (void)storeGoal: (Goal *) packet{
+    
+}
+
+
+//http://www.makebetterthings.com/iphone/how-to-get-md5-and-sha1-in-objective-c-ios-sdk/
+-(NSString*) sha1:(NSString*)input
+{
+    const char *cstr = [input cStringUsingEncoding:NSUTF8StringEncoding];
+    NSData *data = [NSData dataWithBytes:cstr length:input.length];
+    
+    uint8_t digest[CC_SHA1_DIGEST_LENGTH];
+    
+    CC_SHA1(data.bytes, data.length, digest);
+    
+    NSMutableString* output = [NSMutableString stringWithCapacity:CC_SHA1_DIGEST_LENGTH * 2];
+    
+    for(int i = 0; i < CC_SHA1_DIGEST_LENGTH; i++)
+        [output appendFormat:@"%02x", digest[i]];
+    
+    return [output uppercaseString];
+}
+
 
 @synthesize Image0;
 @synthesize Image1;
